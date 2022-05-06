@@ -17,15 +17,11 @@ pipeline {
                 bat "mvn test"
             }
         }
+        stage('Deploy') {
+            steps {
+                bat "mvn clean heroku:deploy"
+            }
+        }
     }
 }
-//         stage('Deploy') {
-//             steps {
-//                 sh "mvn clean heroku:deploy"
-//             }
-//
-//         }
-//
-//
-//     }
-// }
+
