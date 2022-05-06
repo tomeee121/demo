@@ -18,13 +18,13 @@ pipeline {
             steps {
                 sh "mvn test"
             }
-        }
-        stage('Deploy') {
-            steps {
-                sh "mvn clean heroku:deploy"
-            }
-
-        }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 sh "mvn clean heroku:deploy"
+//             }
+//
+//         }
 
 
     }
